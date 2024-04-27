@@ -203,7 +203,7 @@ namespace Gile.AutoCAD.R19.Geometry
             return currentBest;
         }
 
-        private void GetNeighboursAtDistance(Point3d center, double radius, TreeNode<T> node, List<T> items)
+        public void GetNeighboursAtDistance(Point3d center, double radius, TreeNode<T> node, List<T> items)
         {
             if (node == null)
             {
@@ -238,7 +238,7 @@ namespace Gile.AutoCAD.R19.Geometry
             }
         }
 
-        private void GetKNeighbours(Point3d center, int number, TreeNode<T> node, List<(double Distance, T)> items)
+        public void GetKNeighbours(Point3d center, int number, TreeNode<T> node, List<(double Distance, T)> items)
         {
             if (node == null)
             {
